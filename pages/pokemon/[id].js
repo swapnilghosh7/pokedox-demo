@@ -48,12 +48,12 @@ export const getStaticProps = async (context) => {
 
 const Detailspage = ({detailsData}) =>{
     return(
-        <div>
-            <h1>{detailsData.name}</h1>
+        <div className="container">
+            <h1 className="pokemonName">{detailsData.name}</h1>
             <h2>{`Weight : ` + detailsData.weight + ` pounds`}</h2>
             <h2>{`Height : ` + detailsData.height + ` cm`}</h2>
-            <h2>Moves</h2>
-            <ul>
+            <h2 className="pokemon-moves-heading">Moves</h2>
+            <ul className="pokemon-property-list">
                 {detailsData.moves.map(function(data){
                     return(
                         <li className="moves-list">{data.move.name}</li>

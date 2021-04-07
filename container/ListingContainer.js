@@ -16,7 +16,7 @@ const fetchData = async (offset = 0,limit = 10) => {
 
 export const ListingContainer = () =>{
     const [count, setCount] = useState(0);
-    const [listcount, setListCount] = useState(1000);
+    const [listcount, setListCount] = useState(10);
     const [hasMore, setHasMore] = useState(true);
     const [courseList, setCourseList] = useState([]);
     const [loading, setLoadingScreen] = useState(true);
@@ -62,13 +62,17 @@ export const ListingContainer = () =>{
 
     return (
          <>
-            <h1>Hello, Swapnil</h1>
+           
+            <div className="container">
+                <h1>Hello, Swapnil</h1>
             { courseList &&
                     <ListingView fetchMoreItemsCallback={fetchMoreItemsCallback} listData = {courseList} />
             }
             {loading == true &&
                     <LoadingScreen />
             }
+            </div>
+            
             
         </>
     );

@@ -22,3 +22,49 @@ a {
   left: 0;
   background: rgba(0,0,0,0.3);
 }
+.container{
+  max-width: 1440px;
+  /* width: 100vw; */
+  margin: 0 auto;
+  padding: 1rem 4rem;
+  /* background-color: ; */
+}
+ul{
+  padding: 0;
+}
+li{
+  list-style-type: none;
+}
+li.listingPageItems{
+  padding: 20px;
+  background-color: #fcfcfc;
+  border-bottom: 1px solid #ccc;
+  text-transform: capitalize;
+}
+li.listingPageItems:nth-child(even){
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+}
+.listingPageItems:hover{
+  border-right: 4px solid #002366;
+  background-color: #800000 !important;
+  transform: scale(1.1);
+  color: white;
+  font-size: bolder;
+  transition: all 0.3s ease-in-out;
+}
+.listingPageItems a{
+  display: block;
+}
+.pokemonName{
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 48px;
+  color: #002366;
+}
+.loading-screen .loader{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
